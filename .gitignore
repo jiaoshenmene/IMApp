@@ -9,4 +9,7 @@ apache-tomcat-9.0.17/*
 
 *.lock
 
-web/iTalker/build/*
+web/iTalker/build/
+web/iTalker/.idea/
+
+Android/
