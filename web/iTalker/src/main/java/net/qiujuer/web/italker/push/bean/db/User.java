@@ -4,12 +4,12 @@
  * @Date: 2019-04-14 16:46
  */
 package net.qiujuer.web.italker.push.bean.db;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.GenericGenerator;
-import org.hibernate.annotations.LazyCollection;
-import org.hibernate.annotations.LazyCollectionOption;
+import org.hibernate.annotations.*;
 
 import javax.persistence.*;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
@@ -63,7 +63,7 @@ public class User {
     private LocalDateTime createAt = LocalDateTime.now();
 
     // 定义为更新时间戳，在创建事就已经写入
-    @CreationTimestamp
+    @UpdateTimestamp
     @Column(nullable = false)
     private LocalDateTime updateAt = LocalDateTime.now();
 

@@ -8,6 +8,7 @@ package net.qiujuer.web.italker.push.bean.db;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -64,7 +65,7 @@ public class PushHistory {
     private LocalDateTime createAt = LocalDateTime.now();
 
     // 定义为更新时间戳，在创建事就已经写入
-    @CreationTimestamp
+    @UpdateTimestamp
     @Column(nullable = false)
     private LocalDateTime updateAt = LocalDateTime.now();
 
