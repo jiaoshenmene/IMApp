@@ -60,8 +60,16 @@ public class Message {
     @ManyToOne
     @JoinColumn(name = "receiverId")
     private User receiver;
-    @Column(updatable = false, insertable = false)
+    @Column(nullable = false, updatable = false, insertable = false)
     private String receiverId;
+
+    // 一个群可以接收多个消息
+    @ManyToOne
+    @JoinColumn(name = "groupId")
+    private Group group;
+    @Column(updatable = false, insertable = false)
+    private String groupId;
+
 
 
     // 定义为创建时间戳
@@ -73,6 +81,12 @@ public class Message {
     @CreationTimestamp
     @Column(nullable = false)
     private LocalDateTime updateAt = LocalDateTime.now();
+
+
+
+
+
+
 
     public String getId() {
         return id;
@@ -136,5 +150,37 @@ public class Message {
 
     public void setUpdateAt(LocalDateTime updateAt) {
         this.updateAt = updateAt;
+    }
+
+    public String getSenderId() {
+        return senderId;
+    }
+
+    public void setSenderId(String senderId) {
+        this.senderId = senderId;
+    }
+
+    public String getReceiverId() {
+        return receiverId;
+    }
+
+    public void setReceiverId(String receiverId) {
+        this.receiverId = receiverId;
+    }
+
+    public Group getGroup() {
+        return group;
+    }
+
+    public void setGroup(Group group) {
+        this.group = group;
+    }
+
+    public String getGroupId() {
+        return groupId;
+    }
+
+    public void setGroupId(String groupId) {
+        this.groupId = groupId;
     }
 }
