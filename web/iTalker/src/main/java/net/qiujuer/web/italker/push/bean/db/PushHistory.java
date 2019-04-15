@@ -14,7 +14,6 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "TB_PUSH_HISTORY")
-
 public class PushHistory {
 
     @Id

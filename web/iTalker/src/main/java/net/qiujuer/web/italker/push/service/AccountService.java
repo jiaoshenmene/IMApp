@@ -13,6 +13,19 @@ import javax.ws.rs.core.MediaType;
 public class AccountService {
 
     @POST
+    @Path("/register1")
+    //指定请求与返回的相应体为JSON
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+
+    public UserCard register1(RegisterModel model){
+        UserCard card = new UserCard();
+        card.setName("xiaoming");
+
+        return card;
+    }
+
+    @POST
     @Path("/register")
     //指定请求与返回的相应体为JSON
     @Consumes(MediaType.APPLICATION_JSON)

@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
  * @Date: 2019-04-14 22:08
  */
 @Entity
-@Table(name = "TB_Group")
+@Table(name = "TB_GROUP")
 public class Group {
     // 这是一个主键
     @Id
