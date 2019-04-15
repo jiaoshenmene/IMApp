@@ -13,3 +13,6 @@ web/iTalker/build/
 web/iTalker/.idea/
 
 Android/
+*.idea
+web/iTalker/.idea/*
+web/iTalker/.gradle/*

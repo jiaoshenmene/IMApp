@@ -32,8 +32,22 @@ public class AccountService {
     @Produces(MediaType.APPLICATION_JSON)
 
     public UserCard register(RegisterModel model){
+        User user = UserFactory.findByPhone(model.getAccount().trim());
+        if (user != null){
+            UserCard card = new UserCard();
+            card.setName("已有了phone");
+            return card;
+        }
 
-        User user = UserFactory.register(model.getAccount(),model.getPassword(),model.getName());
+        user = UserFactory.findByName(model.getName().trim());
+        if (user != null){
+            UserCard card = new UserCard();
+            card.setName("已有了name");
+            return card;
+        }
+
+
+        user = UserFactory.register(model.getAccount(),model.getPassword(),model.getName());
         if (user != null){
             UserCard card = new UserCard();
             card.setName(user.getName());
@@ -45,6 +59,8 @@ public class AccountService {
         }
         return null;
     }
+
+
 
 
 
