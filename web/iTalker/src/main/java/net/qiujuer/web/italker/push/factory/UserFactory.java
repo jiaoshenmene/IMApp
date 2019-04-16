@@ -41,6 +41,19 @@ public class UserFactory {
     }
 
     /**
+     * 更新用户信息到数据库
+     * @param user
+     * @return User
+     *
+     * */
+    public static User update(User user){
+        return Hib.query(session -> {
+            session.saveOrUpdate(user);
+            return user;
+        });
+    }
+
+    /**
      * 给当前的账户绑定PushId
      * @param user 自己的User
      * @param pushId 自己设备的PushId
@@ -83,10 +96,7 @@ public class UserFactory {
             }
             // 更新新的设备Id
             user.setPushId(pushId);
-            return Hib.query(session -> {
-                session.saveOrUpdate(user);
-                return user;
-            });
+            return update(user);
 
         }
 
@@ -152,7 +162,12 @@ public class UserFactory {
         user.setPhone(account);
 
         // 数据库存储
-        return Hib.query(session -> (User)session.save(user));
+        // 数据库存储
+        return Hib.query(session -> {
+            session.save(user);
+            return user;
+        });
+
     }
 
     /**
@@ -168,10 +183,7 @@ public class UserFactory {
         newToken = TextUtil.encodeBase64(newToken);
         user.setToken(newToken);
 
-        return Hib.query(session -> {
-            session.saveOrUpdate(user);
-            return user;
-        });
+        return update(user);
 
     }
 
