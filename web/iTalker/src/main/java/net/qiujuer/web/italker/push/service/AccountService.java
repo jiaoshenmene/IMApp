@@ -14,7 +14,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 
 @Path("/account")
-public class AccountService {
+public class AccountService extends BaseService{
 
     // 登录
     @POST
@@ -94,23 +94,15 @@ public class AccountService {
     @Produces(MediaType.APPLICATION_JSON)
     // 从请求头中获取token字段
     // pushId从url地址中获取
-    public ResponseModel<AccountRspModel> bind(@HeaderParam("token") String token,
-                                               @PathParam("pushId") String pushId){
-        if (Strings.isNullOrEmpty(token) ||
-            Strings.isNullOrEmpty(pushId)){
+    public ResponseModel<AccountRspModel> bind(@PathParam("pushId") String pushId){
+        if (Strings.isNullOrEmpty(pushId)){
             return ResponseModel.buildParameterError();
         }
         // 拿到自己的个人信息
-        User user = UserFactory.findByToken(token);
-        if (user != null){
+        User self = getSelf();
+        // 设备号绑定的操作
+        return bind(self,pushId);
 
-            // 设备号绑定的操作
-            return bind(user,pushId);
-
-        } else {
-            // token 失效，所以无法进行绑定
-            return ResponseModel.buildAccountError();
-        }
     }
 
     /**
