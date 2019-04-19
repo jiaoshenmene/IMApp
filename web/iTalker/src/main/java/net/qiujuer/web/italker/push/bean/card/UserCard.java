@@ -59,7 +59,7 @@ public class UserCard {
         this.desc = user.getDescription();
         this.sex = user.getSex();
         this.modifyAt = user.getUpdateAt();
-
+        this.isFollow = isFollow;
         // TODO 得到关注人和粉丝的数量
 //         user.getFollowers().size() 懒加载会报错，因为没有Session
 
