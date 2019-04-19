@@ -1,0 +1,14 @@
+platform :ios, '10.0'
+use_frameworks!
+inhibit_all_warnings!
+
+target 'IMClient' do
+    pod 'ReactiveCocoa'
+    pod 'PLCrashReporter'
+    pod 'SDWebImage'
+    pod 'Alamofire'
+    pod 'CocoaAsyncSocket'
+    pod 'Async'
+#    pod 'Toaster'
+    pod 'SnapKit'
+end

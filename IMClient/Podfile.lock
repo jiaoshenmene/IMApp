@@ -1,0 +1,50 @@
+PODS:
+  - Alamofire (4.8.1)
+  - Async (0.2.0)
+  - CocoaAsyncSocket (7.6.3)
+  - PLCrashReporter (1.2.0)
+  - ReactiveCocoa (8.0.2):
+    - ReactiveSwift (~> 4.0)
+  - ReactiveSwift (4.0.0):
+    - Result (~> 4.0)
+  - Result (4.1.0)
+  - SDWebImage (4.4.3):
+    - SDWebImage/Core (= 4.4.3)
+  - SDWebImage/Core (4.4.3)
+  - SnapKit (4.2.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - Async
+  - CocoaAsyncSocket
+  - PLCrashReporter
+  - ReactiveCocoa
+  - SDWebImage
+  - SnapKit
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Async
+    - CocoaAsyncSocket
+    - PLCrashReporter
+    - ReactiveCocoa
+    - ReactiveSwift
+    - Result
+    - SDWebImage
+    - SnapKit
+
+SPEC CHECKSUMS:
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  Async: d80205f1a1b4eea24de8ddc62cf5197ff3025330
+  CocoaAsyncSocket: eafaa68a7e0ec99ead0a7b35015e0bf25d2c8987
+  PLCrashReporter: 16927d86a093d0b9cf110545dacb77cb0ed0f243
+  ReactiveCocoa: fbd26e9ba60e98417ee47433e59465a98ed9da0f
+  ReactiveSwift: a2bb9ace428a109e9c0209615645d9d286c8c433
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  SDWebImage: c5594f1a19c48d526d321e548902b56b479cd508
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+
+PODFILE CHECKSUM: 3d903495986c9be0910418021796e99e75fd73d5
+
+COCOAPODS: 1.6.0.beta.2
