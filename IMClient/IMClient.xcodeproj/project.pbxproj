@@ -27,6 +27,13 @@
 		A18A61A72261D84300E47B74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A18A61A52261D84300E47B74 /* LaunchScreen.storyboard */; };
 		A18A61B22261D84300E47B74 /* IMClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18A61B12261D84300E47B74 /* IMClientTests.swift */; };
 		A18A61BD2261D84300E47B74 /* IMClientUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18A61BC2261D84300E47B74 /* IMClientUITests.swift */; };
+		A1ACFA05226AA72F00453DC0 /* AddFriendVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ACFA04226AA72F00453DC0 /* AddFriendVC.swift */; };
+		A1ACFA07226AA76A00453DC0 /* AddFriendModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ACFA06226AA76A00453DC0 /* AddFriendModel.swift */; };
+		A1ACFA09226AA77F00453DC0 /* AddFriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ACFA08226AA77F00453DC0 /* AddFriendView.swift */; };
+		A1ACFA0C226ABEA300453DC0 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ACFA0B226ABEA300453DC0 /* RegisterVC.swift */; };
+		A1ACFA0E226ABECF00453DC0 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ACFA0D226ABECF00453DC0 /* RegisterViewModel.swift */; };
+		A1ACFA10226ABEDF00453DC0 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ACFA0F226ABEDF00453DC0 /* RegisterView.swift */; };
+		A1ACFA14226AD32400453DC0 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ACFA13226AD32400453DC0 /* APIService.swift */; };
 		BD2D18CEA56D6A7364CFC245 /* Pods_IMClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2ED8E8C1A2FDDF98AE4464E /* Pods_IMClient.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +82,13 @@
 		A18A61B82261D84300E47B74 /* IMClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IMClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A18A61BC2261D84300E47B74 /* IMClientUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMClientUITests.swift; sourceTree = "<group>"; };
 		A18A61BE2261D84300E47B74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1ACFA04226AA72F00453DC0 /* AddFriendVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendVC.swift; sourceTree = "<group>"; };
+		A1ACFA06226AA76A00453DC0 /* AddFriendModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendModel.swift; sourceTree = "<group>"; };
+		A1ACFA08226AA77F00453DC0 /* AddFriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFriendView.swift; sourceTree = "<group>"; };
+		A1ACFA0B226ABEA300453DC0 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		A1ACFA0D226ABECF00453DC0 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		A1ACFA0F226ABEDF00453DC0 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		A1ACFA13226AD32400453DC0 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		B1A31F151AD4470BF227C6EF /* Pods-IMClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMClient.release.xcconfig"; path = "Target Support Files/Pods-IMClient/Pods-IMClient.release.xcconfig"; sourceTree = "<group>"; };
 		B2ED8E8C1A2FDDF98AE4464E /* Pods_IMClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IMClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -203,6 +217,9 @@
 		A18A619B2261D84100E47B74 /* IMClient */ = {
 			isa = PBXGroup;
 			children = (
+				A1ACFA12226AD30200453DC0 /* Service */,
+				A1ACFA0A226ABE8200453DC0 /* Login */,
+				A1ACFA03226AA6F900453DC0 /* Friend */,
 				A126135C2269B915004C5448 /* Contact */,
 				A13ADF30226706CA003B7998 /* Message */,
 				A13ADF2F226706C5003B7998 /* Me */,
@@ -234,6 +251,42 @@
 				A18A61BE2261D84300E47B74 /* Info.plist */,
 			);
 			path = IMClientUITests;
+			sourceTree = "<group>";
+		};
+		A1ACFA03226AA6F900453DC0 /* Friend */ = {
+			isa = PBXGroup;
+			children = (
+				A1ACFA04226AA72F00453DC0 /* AddFriendVC.swift */,
+				A1ACFA08226AA77F00453DC0 /* AddFriendView.swift */,
+				A1ACFA06226AA76A00453DC0 /* AddFriendModel.swift */,
+			);
+			path = Friend;
+			sourceTree = "<group>";
+		};
+		A1ACFA0A226ABE8200453DC0 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A1ACFA11226ABF5000453DC0 /* Register */,
+				A1ACFA0B226ABEA300453DC0 /* RegisterVC.swift */,
+				A1ACFA0F226ABEDF00453DC0 /* RegisterView.swift */,
+				A1ACFA0D226ABECF00453DC0 /* RegisterViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		A1ACFA11226ABF5000453DC0 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		A1ACFA12226AD30200453DC0 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				A1ACFA13226AD32400453DC0 /* APIService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,20 +483,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1ACFA09226AA77F00453DC0 /* AddFriendView.swift in Sources */,
 				A13ADF34226706E9003B7998 /* MeVC.swift in Sources */,
 				A18A619F2261D84100E47B74 /* ViewController.swift in Sources */,
+				A1ACFA10226ABEDF00453DC0 /* RegisterView.swift in Sources */,
 				A13ADF32226706DF003B7998 /* HomeVC.swift in Sources */,
 				A15254FC2268858B00B5BD04 /* BaseTableViewController.swift in Sources */,
+				A1ACFA14226AD32400453DC0 /* APIService.swift in Sources */,
 				A18A619D2261D84100E47B74 /* AppDelegate.swift in Sources */,
 				A15255092268A71A00B5BD04 /* MessageCell.swift in Sources */,
+				A1ACFA05226AA72F00453DC0 /* AddFriendVC.swift in Sources */,
 				A15255012268A2AB00B5BD04 /* BaseViewModel.swift in Sources */,
+				A1ACFA0C226ABEA300453DC0 /* RegisterVC.swift in Sources */,
 				A12613622269B93D004C5448 /* ContactViewModel.swift in Sources */,
+				A1ACFA0E226ABECF00453DC0 /* RegisterViewModel.swift in Sources */,
 				A13ADF36226706F1003B7998 /* MessageVC.swift in Sources */,
 				A15254FF2268A28300B5BD04 /* BaseModel.swift in Sources */,
 				A126135E2269B925004C5448 /* ContactVC.swift in Sources */,
 				A15255052268A6F400B5BD04 /* MessageViewModel.swift in Sources */,
 				A12613602269B931004C5448 /* ContactView.swift in Sources */,
 				A15255032268A3A400B5BD04 /* BaseTableViewCell.swift in Sources */,
+				A1ACFA07226AA76A00453DC0 /* AddFriendModel.swift in Sources */,
 				A145EBE62266D92800F70DC1 /* BaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

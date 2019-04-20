@@ -1,16 +1,17 @@
 //
-//  ContactVC.swift
+//  AddFriendVC.swift
 //  IMClient
 //
-//  Created by 杜甲 on 2019/4/19.
+//  Created by 杜甲 on 2019/4/20.
 //  Copyright © 2019 杜甲. All rights reserved.
 //
 
-class ContactVC: BaseTableViewController {
-    
-    var viewModel: ContactViewModel! {
+import Foundation
+
+class AddFriendVC: BaseTableViewController {
+    var viewModel: AddFriendViewModel! {
         get {
-            return super.baseViewModel as? ContactViewModel
+            return super.baseViewModel as? AddFriendViewModel
         }
         set {
             super.baseViewModel = newValue
@@ -19,12 +20,12 @@ class ContactVC: BaseTableViewController {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        viewModel = ContactViewModel()
+        viewModel = AddFriendViewModel()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configUI()
-        self.title = "联系人"
+        self.title = "添加朋友"
     }
 }

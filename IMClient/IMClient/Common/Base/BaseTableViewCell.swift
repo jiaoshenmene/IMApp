@@ -49,11 +49,11 @@ class BaseTableViewCell: UITableViewCell, ListViewCell {
     func layoutUI() {
     }
     
-    static func height(_ data: CellModel?) -> CGFloat {
+    class func height(_ data: CellModel?) -> CGFloat {
         return 0
     }
     
-    static func size(_ data: CellModel?) -> CGSize {
+    class func size(_ data: CellModel?) -> CGSize {
         return CGSize.zero
     }
     

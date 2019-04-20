@@ -9,10 +9,7 @@
 import Foundation
 
 struct MessageViewModel: ListViewModel {
-    
-//    var messages[]
-    
-    
+  
     var models: [MessageModel] {
         return [MessageModel()]
     }
@@ -44,22 +41,31 @@ struct MessageViewModel: ListViewModel {
 //        guard indexPath.item < models.count else { return models.first ?? models.last ?? Theme.placeholder }
         return models[0]
     }
-    
-    
-    
-    
 }
 
 
 class MessageModel: BaseModel {
-    var content = "text"
+    var name = "小明"
+    var portrait = ""
+    var time = ""
+    var msg = "天好蓝"
+    
+    
     
 }
 struct MessageCellModel: CellModel {
-    let message: MessageModel
+    private let message: MessageModel
+    var name = ""
+    var portrait = ""
+    var time = ""
+    var msg = ""
     
     init(model: BaseModel) {
         message = model as! MessageModel
+        name = message.name
+        portrait = message.portrait
+        time = message.time
+        msg = message.msg
     }
     
     

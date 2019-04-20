@@ -20,6 +20,19 @@ import UIKit
 class BaseViewController: UIViewController {
     var baseViewModel: ViewModel?
     
+    
+    func configUI() {
+        
+    }
+    
+    func updateUI() {
+    }
+    
+    func updateUIEmpty() {
+
+    }
+
+    
 }
 
 

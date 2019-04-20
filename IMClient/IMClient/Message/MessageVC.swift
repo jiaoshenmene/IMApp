@@ -25,9 +25,7 @@ class MessageVC: BaseTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self;
-        tableView.dataSource = self;
-        tableView.register(MessageCell.self, forCellReuseIdentifier: MessageCell.self.reuseIdentifier)
+        configUI()
         self.title = "消息"
     }
 
