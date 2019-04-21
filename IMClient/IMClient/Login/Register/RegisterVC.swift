@@ -11,7 +11,6 @@ import Alamofire
 class RegisterVC: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        Alamofire.request(URL.init(string: "ff"))
         
     }
 }

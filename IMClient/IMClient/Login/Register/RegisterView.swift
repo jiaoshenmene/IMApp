@@ -10,20 +10,23 @@ import UIKit
 
 class RegisterView: UIView {
     
+    var viewModel: RegisterViewModel! = nil
+    
+    
     @IBOutlet weak var phoneTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        viewModel = RegisterViewModel()
     }
     
     @IBAction func registerMethod(_ sender: Any) {
-        let account = phoneTextField.text
-        let name = nameTextField.text
-        let password = passwordTextField.text
-        
+        let account = phoneTextField.text!
+        let name = nameTextField.text!
+        let password = passwordTextField.text!
+        viewModel.register(account, name, password)
         
     }
     

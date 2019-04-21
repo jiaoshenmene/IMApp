@@ -13,6 +13,8 @@ import Foundation
 struct RegisterViewModel {
     
     func register(_ account: String, _ name: String, _ password: String) {
-        
+        APIService.post("api/account/register", ["account" : account,"name":name ,"password": password],finishedCallback: { (result) in
+            print(result)
+        })
     }
 }

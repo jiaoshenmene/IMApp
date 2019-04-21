@@ -6,9 +6,10 @@ target 'IMClient' do
     pod 'ReactiveCocoa'
     pod 'PLCrashReporter'
     pod 'SDWebImage'
-    pod 'Alamofire', '~> 5.0.0-beta.5'
+    pod 'Alamofire'
     pod 'CocoaAsyncSocket'
     pod 'Async'
 #    pod 'Toaster'
     pod 'SnapKit'
+    pod 'AliyunOSSiOS'
 end
