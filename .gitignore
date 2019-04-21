@@ -18,7 +18,7 @@ apache-tomcat-9.0.17/*
 web/iTalker/build/
 web/iTalker/.idea/
 
-Android/
+#Android/
 *.idea
 web/iTalker/.idea/*
 web/iTalker/.gradle/*
